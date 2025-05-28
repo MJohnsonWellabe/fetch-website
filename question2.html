@@ -1,20 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch - Emergency Room Coverage</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch - Outpatient Surgery Coverage</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .speech-bubble {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    .speech-bubble::after {
+      position: absolute;
+      top: 40px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-right-color: #ffffff;
+    }
+
+    .speech-bubble h1 {
+      margin-top: 0;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .dog-image {
+      max-width: 250px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Would you like coverage for emergency room visits?</h1>
-        <p>This would cover some of your expenses if you need to visit the emergency room for an injury or illness.</p>
-        <div class="buttons">
-            <button onclick="location.href='outpatient_surgery.html'">No</button>
-            <button onclick="location.href='outpatient_surgery.html'">Yes</button>
-        </div>
+  <div class="container">
+    <img src="dog_image.png" alt="Cute dog" class="dog-image">
+    <div class="speech-bubble">
+      <h1>Would you like coverage for outpatient surgery?</h1>
+      <p>This could be especially helpful for these situations...</p>
+      <div class="buttons">
+        <button onclick="location.href='cancer_coverage.html'">No</button>
+        <button onclick="location.href='cancer_coverage.html'">Yes</button>
+      </div>
     </div>
+  </div>
 </body>
 </html>

@@ -1,32 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch - Enroll</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch - Enroll</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .speech-bubble {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    .speech-bubble::after {
+      position: absolute;
+      top: 40px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-right-color: #ffffff;
+    }
+
+    .speech-bubble h1 {
+      margin-top: 0;
+    }
+
+    .dog-image {
+      max-width: 250px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Great, you've selected plan 1. This coverage will work well for you.</h1>
-        <p>I just need to collect a few details and I can Fetch your policy today!</p>
-        <form action="submit_application.html">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" id="dob" name="dob"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="address">Street Address:</label><br>
-            <input type="text" id="address" name="address"><br>
-            <label for="payment_method">Payment Method:</label><br>
-            <input type="text" id="payment_method" name="payment_method"><br>
-            <label for="payment_mode">Payment Mode:</label><br>
-            <input type="text" id="payment_mode" name="payment_mode"><br>
-            <input type="submit" value="Submit Application">
-        </form>
+  <div class="container">
+    <img src="dog_image.png" alt="Cute dog" class="dog-image">
+    <div class="speech-bubble">
+      <h1>Great, you've selected plan 1. This coverage will work well for you.</h1>
+      <p>I just need to collect a few details and I can Fetch your policy today!</p>
+      <form action="submit_application.html">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="address">Street Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+        <label for="payment_method">Payment Method:</label><br>
+        <input type="text" id="payment_method" name="payment_method"><br>
+        <label for="payment_mode">Payment Mode:</label><br>
+        <input type="text" id="payment_mode" name="payment_mode"><br>
+        <input type="submit" value="Submit Application">
+      </form>
+      <div class="buttons">
         <button onclick="location.href='agent.html'">Fetch an Agent</button>
+      </div>
     </div>
+  </div>
 </body>
 </html>

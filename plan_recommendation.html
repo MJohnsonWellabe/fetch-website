@@ -1,53 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch - Plan Recommendation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch - Plan Recommendation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .speech-bubble {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    .speech-bubble::after {
+      position: absolute;
+      top: 40px;
+      left: -20px;
+      width: 0;
+      transparent;
+      border-right-color: #ffffff;
+    }
+
+    .speech-bubble h1 {
+      margin-top: 0;
+    }
+
+    .dog-image {
+      max-width: 250px;
+      height: auto;
+    }
+
+    .plan {
+      margin-top: 20px;
+    }
+
+    .plan h3 {
+      margin-bottom: 5px;
+    }
+
+    .plan ul {
+      padding-left: 20px;
+    }
+
+    .plan button {
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Thank you for your answers! That's all the questions.</h1>
-        <p>You selected $40-60 per month, outpatient surgery coverage, and ambulance coverage. I've curated 3 plans for you.</p>
-        <h2>To begin enrollment, please select the plan of your choice:</h2>
-        <div class="plan">
-            <h3>Plan 1</h3>
-            <p>$35/month</p>
-            <p>Coverage:</p>
-            <ul>
-                <li>$100 per day for 3 day hospital stay</li>
-                <li>$1000 outpatient surgery coverage</li>
-                <li>$300 ambulance coverage</li>
-            </ul>
-            <button onclick="location.href='enroll.html'">Enroll</button>
-            <button onclick="location.href='agent.html'">Fetch an Agent</button>
-        </div>
-        <div class="plan">
-            <h3>Plan 2</h3>
-            <p>$45/month</p>
-            <p>Coverage:</p>
-            <ul>
-                <li>$100 per day for 6 day hospital stay</li>
-                <li>$500 outpatient surgery coverage</li>
-                <li>$150 ambulance coverage</li>
-            </ul>
-            <button onclick="location.href='enroll.html'">Enroll</button>
-            <button onclick="location.href='agent.html'">Fetch an Agent</button>
-        </div>
-        <div class="plan">
-            <h3>Plan 3</h3>
-            <p>$55/month</p>
-            <p>Coverage:</p>
-            <ul>
-                <li>$150 per day for 6 day hospital stay</li>
-                <li>$750 outpatient surgery coverage</li>
-                <li>$300 ambulance coverage</li>
-            </ul>
-            <button onclick="location.href='enroll.html'">Enroll</button>
-            <button onclick="location.href='agent.html'">Fetch an Agent</button>
-        </div>
+  <div class="container">
+    <img src="dog_image.png" alt="Cute dog" class="dog-image">
+    <div class="speech-bubble">
+      <h1>Thank you for your answers! That's all the questions.</h1>
+      <p>You selected $40-60 per month, outpatient surgery coverage, and ambulance coverage. I've curated 3 plans for you.</p>
+      <h2>To begin enrollment, please select the plan of your choice:</h2>
+
+      <div class="plan">
+        <h3>Plan 1</h3>
+        <p>$35/month</p>
+        <ul>
+          <li>$100 per day for 3 day hospital stay</li>
+          <li>$1000 outpatient surgery coverage</li>
+          <li>$300 ambulance coverage</li>
+        </ul>
+        <button onclick="location.href='enroll.html'">Enroll</button>
+        <button onclick="location.href='agent.html'">Fetch an Agent</button>
+      </div>
+
+      <div class="plan">
+        <h3>Plan 2</h3>
+        <p>$45/month</p>
+        <ul>
+          <li>$100 per day for 6 day hospital stay</li>
+          <li>$500 outpatient surgery coverage</li>
+          <li>$150 ambulance coverage</li>
+        </ul>
+        <button onclick="location.href='enroll.html'">Enroll</button>
+        <button onclick="location.href='agent.html'">Fetch an Agent</button>
+      </div>
+
+      <div class="plan">
+        <h3>Plan 3</h3>
+        <p>$55/month</p>
+        <ul>
+          <li>$150 per day for 6 day hospital stay</li>
+          <li>$750 outpatient surgery coverage</li>
+          <li>$300 ambulance coverage</li>
+        </ul>
+        <button onclick="location.href='enroll.html'">Enroll</button>
+        <button onclick="location.href='agent.html'">Fetch an Agent</button>
+      </div>
     </div>
+  </div>
 </body>
 </html>
